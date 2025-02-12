@@ -1,0 +1,102 @@
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-image:url("./assets/bg-el.jpg");
+            background-size: cover;
+            /* background: linear-gradient(135deg, #6a11cb, #2575fc); */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        .md {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: #fff;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        #email, #pass, #signup-email, #signup-pass, #signin-email, #signin-pass {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            font-size: 1rem;
+            outline: none;
+            transition: background 0.3s ease;
+        }
+
+        /* #email:focus, #pass:focus{
+            background-color:rgba(255, 255, 255, 0.3);
+        } */
+        /* #signup-email:focus,#signup-pass:focus{
+            background-color: #e9dfdf;
+        }
+         #signin-email:focus, #signin-pass:focus{
+            background-color: #e9dfdf;
+         } */
+
+        #sb1, #signin-submit, #din, #bs,#gl {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: #6a11cb;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        #sb1:hover, #signin-submit:hover {
+            background: #2575fc;
+        }
+        #gl:hover,#din:hover, #bs:hover{
+            background: #2575fc;
+        }
+
+        #signin {
+            display: none;
+        }
+
+        #din, #bs{
+            margin-top: 10px;
+            background: #2575fc;
+        }
+
+        #din:hover, #bs:hover {
+            background: #6a11cb;
+        }
+        #bs{
+            display: none;
+        }
+        ::placeholder{
+            color:white;
+        }
+        
+    
