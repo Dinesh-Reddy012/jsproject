@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up / Sign In</title>
+    <link rel="stylesheet" href="./firebase1.css"></link>
+    
+</head>
+<body>
+    <div class="md">
+        <form action="" id="signup">
+            <h1>SIGN UP</h1>
+            <input type="email" id="signup-email" placeholder="Enter Your Email" required /><br /><br />
+            <input type="password" placeholder="Enter your password" id="signup-pass" required /><br /><br />
+            <input id="sb1" type="submit" value="Submit" />
+        </form><br>
+        <p id="sp">already have an account?</p>
+        <button id="din">Sign In</button><br><br>
+        <button id="gl">Guest Login</button>
+
+        <form action="" id="signin">
+            <h1>SIGN IN</h1>
+            <input type="email" required id="signin-email" placeholder="enter your email"/><br /><br />
+            <input type="password" required id="signin-pass" placeholder="enter your password" /><br /><br />
+            <input id="signin-submit" type="submit" value="Sign In" />
+        </form>
+
+        <button id="bs">Back to Sign Up</button>
+    </div>
+
+    <script>
+        document.getElementById('din').addEventListener('click', function() {
+            document.getElementById('signup').style.display = 'none';
+            document.getElementById('signin').style.display = 'block';
+            document.getElementById('din').style.display = 'none';
+            document.getElementById('bs').style.display = 'block';
+            document.getElementById('sp').style.display = 'none';
+            document.getElementById('gl').style.display = 'none';
+
+
+        });
+
+        document.getElementById('bs').addEventListener('click', function() {
+            document.getElementById('signin').style.display = 'none';
+            document.getElementById('signup').style.display = 'block';
+            document.getElementById('din').style.display = 'block';
+            document.getElementById('bs').style.display = 'none';
+            document.getElementById('sp').style.display = 'block';
+
+        });
+
+        document.getElementById("gl").addEventListener("click",()=>{
+            window.location.replace("./jsproject1.html");
+        })
+    </script>
+</body>
+</html>

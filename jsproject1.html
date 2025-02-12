@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+    }
+   /* NAVBAR STYLES */
+#nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #224099;
+    color: white;
+    position: sticky;
+    top: 0;
+    padding: 15px;
+    z-index: 1000;
+}
+
+/* DROPDOWN MENU */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* DROPDOWN BUTTON */
+.dropbtn {
+    padding: 10px;
+}
+
+/* DROPDOWN CONTENT */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    z-index: 1000;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+/* HOVER EFFECT */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+    #mu{
+        display: flex;
+        flex-wrap: wrap;
+      
+    }
+    #nav_btn{
+        border-color: aliceblue;
+        height:30%;
+        padding: 8px;
+        font-size: 20px;
+        border-radius: 7px;
+        cursor: pointer;
+        margin-top: 0px;
+    }
+    #title{
+        
+        display: flex;
+        /* flex-wrap: wrap; */
+        /* flex-direction:row; */
+        align-items: center;
+        justify-content: space-between;
+        gap:10%;
+        /* font-style: oblique; */
+        box-sizing: border-box;
+       }
+
+       #ta{
+       text-decoration: none;
+       color: white;
+       }
+
+   
+   
+    #MC{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(217, 238, 111);
+        border-radius: 8px;
+        border: 5px solid #224099;
+         }
+
+        
+/* SECTION STYLES */
+
+#sec {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5% 10%;
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid;
+}
+
+
+
+/* LEFT TEXT CONTENT */
+#sec-content {
+    max-width: 50%;
+}
+
+#sec-content h3 {
+    color: #224099;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#sec-content h1 {
+    font-size: 3em;
+    font-weight: bold;
+    color: #222;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+#sec-content p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-primary {
+    background: #224099;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-outline {
+    background: transparent;
+    color: #224099;
+    border: 2px solid #224099;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* RIGHT IMAGE AND STATS */
+#sec-image {
+    position: relative;
+    width: 45%;
+   
+    left:-7%;
+    top:-18%;
+    z-index: 0;
+    /* transform: translate(0%, -40%); */
+}
+
+#sec-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.stats {
+    position: absolute;
+    top: 50%;
+    right: -110px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.stat-box {
+    background: #23205A;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    text-align: center;
+    opacity: 0;  /* Initially hidden */
+    transform: translateX(100px);  /* Start position (off-screen) */
+    animation: slideIn 1s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+.stat-box h2 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+
+
+/* KEYFRAME ANIMATION */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+#title h1 {
+    margin: px;
+    color:rgb(209, 102, 14);               
+    padding: 0.2em 0.4em;     
+    border-radius: 4px;
+    font-weight: bold;        
+    margin: 0;                 
+     } 
+
+     /* @keyframes topin {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+} */
+@keyframes botup {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* #nav, #sec, .about_us {
+    flex-wrap: wrap;
+} */
+@media (max-width: 768px) {
+    #nav {
+        flex-direction: column; /* Stack items on top of each other */
+         padding: 10px;
+        /* display:hidden; */
+    }
+
+    #nav h3, .dropdown {
+        margin: 5px 0;
+    }
+
+    #sec {
+        flex-direction: column; /* Stack content */
+        text-align: center;
+        padding: 5% 5%;
+        height: auto;
+    }
+
+    #sec-content {
+        max-width: 100%;
+    }
+
+    #sec-image {
+        width: 100%;
+        left: 0;
+    }
+
+    .stats {
+        position: static;
+        transform: none;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+     .about_us {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 20px;
+        flex-wrap:wrap;
+        
+    }
+
+    #a1, #a2, #a3 {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    #MC {
+        text-align: center;
+    }
+   }
+   
+    .a{
+        display: flex;
+        flex-wrap: wrap;
+        gap:5%;
+    }
+   
+    #a3{
+        height:100%;
+        width: 30%;
+    }  */
+    .container {
+            /* max-width: 1200px; */
+             /* width:100vw; */
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+    .container:hover .image-section{
+        transform: translateX(100px);  /* Start position (off-screen) */
+        animation: slideIn 1s ease-out forwards;
+        animation-delay: 0.3s;
+    }
+    .container:hover .features{
+        transform: translateY(100px);  /* Start position (off-screen) */
+        animation: botup 1s ease-out forwards;
+        animation-delay: 0.5s;
+    }
+        .header {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .text-section {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+        }
+        .image-section {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+            
+        }
+        .image-section img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+      .text-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items:flex-start;
+        align-content:flex-start;
+        gap:10vh;
+        color:#29276a;
+        font-size:1.5rem;
+      }
+      .features{
+        color:#29276a;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      
+   
+</style>
+</head>
+<body>
+    <nav id="nav">
+        <div id="title">
+            <img src="./assets/icon.png" height="50px" width="50px" alt="">
+            <div id="MC">
+                <h1 style="color:rgba(0, 0, 0, 0.916)">MANA</h1>
+                <h1 style="color:rgb(232, 67, 7)">COLLEGE</h1>
+            </div>
+        </div>
+        
+        <h3><a id="ta" href="">Home</a></h3>
+        <h3><a id="ta"  href="">About</a></h3>
+    
+        <!-- Courses Dropdown -->
+        <div class="dropdown">
+            <h3 class="dropbtn">Courses ⌵ </h3>
+            <div class="dropdown-content">
+                <a href="#">Web Development</a>
+                <a href="#">Data Science</a>
+                <a href="#">Graphic Design</a>
+            </div>
+        </div>
+    
+        <!-- Pages Dropdown -->
+        <div class="dropdown">
+            <h3 class="dropbtn">Pages ⌵ </h3>
+            <div class="dropdown-content">
+                <a href="#">Pricing</a>
+                <a href="#">Career</a>
+                <a href="#">Teacher</a>
+                <a href="#">FAQ</a>
+                <a href="#">404 Page</a>
+            </div>
+        </div>
+    
+        <h3>Contact</h3>
+        <button id="nav_btn">Logout</button>
+    </nav>
+    
+  <section id="sec">
+        <div id="sec-content">
+            <h3>WELCOME TO MANA COLLEGE</h3>
+            <h1>Transform Your Future with <br> Expert-Led Online Courses</h1>
+            <p>Join our high-quality courses and learn from the best.</p>
+            <div class="buttons">
+                <button class="btn-primary">Get Started</button>
+                <button class="btn-outline">Browse Courses</button>
+            </div>
+        </div>
+    
+        <div id="sec-image">
+            <img src="./assets/project-img1.png" alt="Student">
+            <div class="stats">
+                <div class="stat-box">
+                    <h2>250+</h2>
+                    <p>Best Instructors</p>
+                </div>
+                <div class="stat-box">
+                    <h2>2,000+</h2>
+                    <p>Courses</p>
+                </div>
+                <div class="stat-box">
+                    <h2>10,000+</h2>
+                    <p>Students</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <div class="header">About Us</div>
+        <div class="content">
+            <div class="text-section">
+                <div class="tp">
+                <p>We are a passionate team dedicated to bringing innovative solutions to our customers. Our mission is to empower businesses and individuals with cutting-edge technology and exceptional services.</p>
+                <p>With years of experience in the industry, we take pride in delivering quality products and unmatched customer support.</p>
+            </div>
+            <div class="features">
+                <div><i class="fa"></i> Innovative Learning ☑</div>
+                <div><i class="fa"></i> Unlimited Access ☑</div>
+                <div><i class="fa"></i> Superior Results ☑</div>
+                <div><i class="fa"></i> Digital Education ☑</div>
+            </div>
+        </div>
+            <div class="image-section">
+                <img src="./assets/img-1.avif" alt="About Us">
+            </div>
+        </div>
+    </div>
+   
+    <script>
+        let logout=  document.getElementById("nav_btn")
+        logout.addEventListener("click",()=>{
+            location.replace("./firebaseform.html")
+        })
+    </script>
+</body>
+</html>
